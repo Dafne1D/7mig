@@ -18,5 +18,8 @@ export default class Card{
     set value(value){
         this._value = value;
     }
+    toString(){
+        return this._value + ' de ' + this._suit;
+    }
 }
 

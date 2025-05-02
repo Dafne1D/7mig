@@ -1,5 +1,5 @@
-import Jugador from "./Jugador";
-import Deck from "./Baralla";
+import Jugador from './Jugador.js';
+import Deck from './Baralla.js';
 
 export default class Game {
     constructor(){
@@ -31,9 +31,10 @@ export default class Game {
 
     //iniciar joc
     initGame(){
-        //Crear baralla
-        this._deck.crearBaralla(); //Crear baralla
-        this._deck.barallar(); //Barallar baralla
+        //Crear baralla i barallar
+        this._deck.crearBaralla(); 
+        this._deck.barallar();
+
         //Crear jugador
         this._jugador = new Jugador(nom); //Inicialitzar jugadors
         this._jugador.money = 100; //Inicialitzar diners del jugador
@@ -41,5 +42,8 @@ export default class Game {
         //Crear computer
         this._computer = new Jugador("Computer"); //Inicialitzar computer
         this._computer.deck.push(this._deck.pop()); //Assignar baralla al computer
+    }
+    dealCart(player){
+        player.deck-push(this._deck.pop()); //Afegir carta a la ma del jugador
     }
 }

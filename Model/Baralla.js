@@ -1,5 +1,5 @@
 //Imports
-import Card from "./Carta";
+import Card from './Card.js';
 
 const SUITS = ['Espases','Oros','Bastos','Copes'];
 const VALUES = [1,2,3,4,5,6,7,8,9,10,11,12]
@@ -15,11 +15,11 @@ export default class Deck {
     }
 
     //Repartir carta
-    popCarta(){
+    repartirCarta(){
         return this._cards.pop(); //Elimina la carta de la baralla i la retorna
     }
 
-    push(carta){
+    addCartaBaralla(carta){
         this._cards.push(carta); //Afegeix la carta a la baralla
     }
     //Generar baralla

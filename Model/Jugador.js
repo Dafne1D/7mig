@@ -1,4 +1,4 @@
-import Deck from "./Baralla";
+import Deck from "./Baralla.js";
 
 export default class Jugador{
     constructor(nom, id){
