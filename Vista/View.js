@@ -17,13 +17,13 @@ export class View{
 
         //render player cards
        player.deck.cards.forEach(card => {
-        const cardDiv = document.createElement('div');
+        const cardDiv = document.createElement(card);
         this._divPlayerDeck.appendChild(cardDiv);
         });
 
         //render computer cards
         computer.deck.cards.forEach(card => {
-            const cardDiv = document.createElement('div');
+            const cardDiv = document.createElement(card);
             this._dicDealerDeck.appendChild(cardDiv);
         });
     }
